@@ -1,0 +1,25 @@
+ public string SQLTest()
+        {
+            string ConnectionResponse = "";
+            try
+            {
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["paragontune.1dc.com"].ConnectionString);
+                connection.Open();
+                if ((connection.State & System.Data.ConnectionState.Open) > 0)
+                {
+                    ConnectionResponse = "Connection Ok!";
+                    connection.Close();
+                }
+                else
+                {
+                    ConnectionResponse = "No Connection made!";
+                }
+
+            }//end try
+            catch
+            {
+                ConnectionResponse = "No Connection made!";
+            }
+
+            return ConnectionResponse;
+        }//End of SQL Test
