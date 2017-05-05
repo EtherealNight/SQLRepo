@@ -3,7 +3,7 @@
             string ConnectionResponse = "";
             try
             {
-                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["paragontune.1dc.com"].ConnectionString);
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["connection string here"].ConnectionString);
                 connection.Open();
                 if ((connection.State & System.Data.ConnectionState.Open) > 0)
                 {
